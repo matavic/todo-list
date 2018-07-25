@@ -8,11 +8,13 @@
     <title>TodoList App</title>
 </head>
 <body>
-    <div class="container">
+    @include('partials.navbar')
+    <div class="container mt-5">
+        @include('partials.messages')
         @yield('content')
     </div>
 
-    <footer id="footer" class="text-center">
+    <footer id="footer" class="text-center mt-5">
         <p>Copyright 2018 &copy; VMC</p>
     </footer>
 </body>
