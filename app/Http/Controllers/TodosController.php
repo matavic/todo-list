@@ -94,7 +94,7 @@ class TodosController extends Controller
 
         $todo->save();
 
-        return redirect('/')->with('success', 'Todo modified');
+        return redirect('/')->with('success', 'Todo Updated');
 
     }
 
@@ -106,6 +106,9 @@ class TodosController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $todo = Todo::find($id);
+        $todo->delete();
+        return redirect('/')->with('success', 'Todo deleted');
+
     }
 }
