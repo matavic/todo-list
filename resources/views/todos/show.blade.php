@@ -11,4 +11,5 @@
         {{$todo->due}}
     </span>
     </div>
+    <a href="/todo/{{$todo->id}}/edit" class="btn btn-info">Edit</a>
 @endsection
